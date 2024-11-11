@@ -1,0 +1,9 @@
+package com.reservaaa.reserva1.repository;
+
+import com.reservaaa.reserva1.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User,Long> {
+
+        User findFirstByEmail(String email);
+}
